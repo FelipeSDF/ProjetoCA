@@ -1,0 +1,46 @@
+
+/*  ====================================================== */
+#home-recent-process-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 94%;
+    height: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+}
+
+#home-recent-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: 45%;
+    height: 100%;
+}
+.home-recent-img-container-div{
+    width: 90%;
+    height: 95%;
+}
+.home-recent-img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+#home-recent-report-container{
+    width: 50%;
+    height: 95%;
+    align-content: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#home-recent-report{
+    align-content: center;
+    height: 100%;
+    font-family: var(--font-family);
+    font-size: large;
+}

@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+:root{
+  --color-primary: rgb(23, 128, 119);
+  --color-secondary: rgb(23, 128, 119);
+  --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,6 @@
+@import url('../css/partials/card.css');
+@import url('../css/partials/recents.css');
+@import url('../css/partials/reminder.css');
+ *{
+    /* border: solid 1px; */
+ }
