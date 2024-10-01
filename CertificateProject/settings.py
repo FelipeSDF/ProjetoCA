@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,12 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livereload',
     'django.contrib.staticfiles',
+    'CertificateProject',
     'archive',
     'reports',
     'certificates',
     'home',
-    'CertificateProject'
 ]
 
 MIDDLEWARE = [
@@ -52,7 +54,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'livereload.middleware.LiveReloadScript'
 ]
+
+# LIVERELOAD_HOST = '127.0.0.1'
+# LIVERELOAD_PORT  = '8000' 
 
 ROOT_URLCONF = 'CertificateProject.urls'
 
@@ -66,6 +72,7 @@ TEMPLATES = [
             BASE_DIR / 'home/templates/',
             BASE_DIR / 'CertificateProject/templates/',
             ],
+        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,13 +143,13 @@ STATIC_DIRS = [
 ]
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = [
-    BASE_DIR / 'archive/media/',
-    BASE_DIR / 'reports/media/',
-    BASE_DIR / 'certificates/media/',
-    BASE_DIR / 'home/media/',
-    BASE_DIR / 'CertificateProject/media/',
-]
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+    # os.path.join(BASE_DIR, 'archive/media/',),
+    # os.path.join(BASE_DIR, 'reports/media/',),
+
+    # os.path.join(BASE_DIR, 'home/media/',),
+    # os.path.join(BASE_DIR, 'CertificateProject/media/',),
 
 
 # Default primary key field type

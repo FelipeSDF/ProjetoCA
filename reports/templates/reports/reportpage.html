@@ -1,0 +1,14 @@
+{% extends 'global/Base.html' %}
+{% block content %}
+
+{% if status == 'unposted' %}
+
+    {% include 'reports/partials/forms.html' %}
+
+{% elif status == 'posted' %}
+
+    {% include 'reports/partials/report.html' %}
+
+{% endif %}
+
+{% endblock content %}

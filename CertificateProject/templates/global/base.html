@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'global/partials/head.html' %}
+</head>
+<body>
+    <header id="global-header-container">
+        {% comment %} <a href="" id="global-logo-container-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6yJApjYqEixUUgppr3-C1LeL_1P2Sng50A&s" alt="logo" id="global-logo-header">
+        </a> {% endcomment %}
+
+        <ul id="global-ul-header">
+            <li class="global-li-header"><a href="{% url 'homepage' %}">Home</a></li>
+            <li class="global-li-header"><a href="{% url 'certificatepage' %}">Certidões</a></li>
+            <li class="global-li-header"><a href="{% url 'reportpage' %}">Relatórios</a></li>
+            <li class="global-li-header"><a href="{% url 'archivepage' %}">Arquivar</a></li>
+        </ul>
+    </header>
+    <main>
+
+        {% block content %}{% endblock content %}
+
+    </main>
+</body>
+</html>

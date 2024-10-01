@@ -1,0 +1,15 @@
+{% load static %}
+
+<p>
+{% comment %} {{context.Nome}}
+{{context.Data}},
+{{context.Local}},
+{{context.Bairro}},
+{{context.Unidade}},
+{{context.Obs}},
+{{context.Pavimento}},
+{{context.Eletricidade}},
+{{context.Iluminação}} e
+{{context.Casas}}. {% endcomment %}
+{{context.Relatorio|linebreaks}}
+</p>

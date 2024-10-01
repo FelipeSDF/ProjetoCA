@@ -1,0 +1,16 @@
+{% load static %}
+
+<section id="home-recent-process-container">
+    <div id="home-recent-img-container">
+        <div class="home-recent-img-container-div">
+            <img src=" {{last.photos.url}} " alt="image" class="home-recent-img">
+        </div>
+    </div>
+
+    <div id="home-recent-report-container">
+        <h2>Útimo Relatório</h2>
+        <p id="home-recent-report">
+           {{last.Reports}}
+        </p>
+    </div>
+</section>

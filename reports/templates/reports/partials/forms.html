@@ -1,0 +1,203 @@
+{% load static %}
+
+<form action="{% url 'reportpage' %}" method="post" id="report-form" enctype="multipart/form-data" >{% csrf_token %}
+
+
+<div class="area-horizontal"> 
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=48&id=2YHBrgJkUHzJ&format=png" alt="">
+            <label for="Numero" class="form-label">
+                Numero
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Numero" type="number" name="Numero" class="form-input small-input"></input>
+        </div>
+    </section>
+
+
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=30&id=ilO1-m5bKBS4&format=png" alt="">
+            <label for="Date" class="form-label">
+                Date
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Date" type="date" name="Date" class="form-input"></input>
+        </div>
+    </section>
+</div>
+<div class="area-horizontal"> 
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=40&id=61987&format=png" alt="">
+            <label for="Local" class="form-label">
+                Local
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Local" name="Local" class="form-input"></input>
+        </div>
+    </section>
+
+
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=40&id=61987&format=png" alt="">
+            <label for="Bairro" class="form-label">
+                Bairro
+            </label>
+        </div>
+        <div class="form-input-container">
+        </div>
+            <input id="Bairro" name="Bairro" class="form-input"></input>
+        </div>
+    </section>
+</div>
+<div class="area-horizontal"> 
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=48&id=81284&format=png" alt="">
+            <label for="Unidade" class="form-label">
+                Unidade
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Unidade" name="Unidade" class="form-input"></input>
+        </div>
+    </section>
+
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=48&id=80414&format=png" alt="">
+            <label for="Obs" class="form-label">
+                Obs
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Obs" name="Obs" class="form-input"></input>
+        </div>
+    </section>
+</div>
+
+<div class="area-horizontal">
+
+        <section class="form-selection-area-container">
+            <div class="form-label-container">
+                <img src="https://img.icons8.com/?size=48&id=7VIEQ1GiK0Iz&format=png" alt="">
+                <label for="Pavimento" class="form-label">
+                    Pavimentação
+                </label>
+            </div>
+    
+            <div class="form-input-container">
+                <select id="Pavimento" name="Pavimento" class="form-select">
+                    <option value="pavimentada">Presente</option>
+                    <option value="parcialmente pavimentada">Parcialmente</option>
+                    <option value="carente de pavimentação">Ausente</option>
+                </select>
+            </div>
+        </section>
+    
+    
+        <section class="form-selection-area-container">
+            <div class="form-label-container">
+                <img src="https://img.icons8.com/?size=48&id=MEwb2lHaMFxX&format=png" alt="">
+                <label for="Eletricidade" class="form-label">
+                    Rede Elétrica
+                </label>
+            </div>
+    
+            <div class="form-input-container">
+                <select id="Eletricidade" name="Eletricidade" class="form-select">
+                <option value="rede elétrica presente">Presente</option>
+                <option value="rede elétrica parcialmente presente">Parcialmente</option>
+                <option value="rede elétrica ausente">Ausente</option>
+    
+            </select>
+            </div>
+        </section>
+    
+    
+        <section class="form-selection-area-container">
+            <div class="form-label-container">
+                <img src="https://img.icons8.com/?size=48&id=xLj25NrPMxFQ&format=png" alt="">
+                <label for="Iluminação" class="form-label">
+                    Iluminação
+                </label>
+            </div>
+    
+            <div class="form-input-container">
+                <select id="Iluminação" name="Iluminação" class="form-select">
+                    <option value="iluminação pública presente">Presente</option>
+                    <option value="iluminação pública parcialmente presente">Parcialmente</option>
+                    <option value="iluminação pública ausente">Ausente</option>
+                </select>
+            </div>
+        </section>
+    
+    
+        <section class="form-selection-area-container">
+            <div class="form-label-container">
+                <img src="https://img.icons8.com/?size=48&id=wFfu6zXx15Yk&format=png" alt="">
+                <label for="Casas" class="form-label">
+                    Casas
+                </label>
+            </div>
+    
+            <div class="form-input-container">
+                <select id="Casas" name="Casas" class="form-select">
+                    <option value="muitas casas ao redor">muitas</option>
+                    <option value="algumas casas ao redor">algumas</option>
+                    <option value="poucas casas ao redor">poucas</option>
+                    <option value="nenhuma casa ao redor">nenhuma</option>
+                </select>
+            </div>
+        </section>
+
+</div>
+
+<div class="area-horizontal">
+    <section class="form-selection-area-container">
+        <div class="form-label-container">
+            <img src="https://img.icons8.com/?size=64&id=118996&format=png" alt="">
+            <label for="Fotos" class="form-label">
+                Fotos
+            </label>
+        </div>
+
+        <div class="form-input-container">
+            <input id="Fotos" type="file" multiple name="Fotos" class="form-input"></input>
+        </div>
+    </section>
+
+    <section class="form-button-sent-area">
+            <button type="submit" id="button-send-report">
+                <img src="https://img.icons8.com/?size=48&id=11849&format=png" alt="">
+            Enviar
+        </button>
+        </div>
+    </section>
+
+</div>
+</form>
+
+{% comment %} Numero
+date
+Local
+Bairro
+Unidade
+Obs
+Pavimento
+Eletricidade
+Iluminação
+Casas
+Fotos
+Relatório {% endcomment %}
