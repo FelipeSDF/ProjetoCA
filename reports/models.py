@@ -1,4 +1,5 @@
 from django.db import models
+import django
 import datetime
 from CertificateProject.settings import BASE_DIR, MEDIA_ROOT
 
@@ -7,7 +8,7 @@ today = datetime.date.today()
 # Create your models here.
 class Report(models.Model):
     number = models.CharField(max_length=10)
-    data = models.DateField(default=today)
+    data = models.DateField(default=django.utils.timezone.now)
     datetime_created = models.DateTimeField(auto_created=True, auto_now_add= True)
     local = models.CharField(max_length=255)
     bairro = models.CharField(max_length=255)
